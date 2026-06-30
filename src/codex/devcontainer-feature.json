@@ -1,0 +1,26 @@
+{
+    "name": "Codex CLI",
+    "id": "codex",
+    "version": "1.0.0",
+    "description": "Installs the OpenAI Codex CLI and configures Codex state from your host ~/.codex directory.",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Codex CLI release to install. Use latest or a release version such as x.y.z."
+        }
+    },
+    "containerEnv": {
+        "CODEX_HOME": "/codex-home"
+    },
+    "mounts": [
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.codex",
+            "target": "/codex-home"
+        }
+    ],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
