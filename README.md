@@ -10,7 +10,7 @@ The `codex` Feature installs the Codex CLI in the image and configures runtime C
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/<owner>/devcontainer-features/codex:1": {}
+        "ghcr.io/SirTremain/devcontainer-features/codex:1": {}
     }
 }
 ```
@@ -30,7 +30,7 @@ To install this Feature automatically in dev containers opened with the VS Code 
 ```jsonc
 {
     "dev.containers.defaultFeatures": {
-        "ghcr.io/<owner>/devcontainer-features/codex:1": {}
+        "ghcr.io/SirTremain/devcontainer-features/codex:1": {}
     }
 }
 ```
@@ -40,7 +40,7 @@ Replace `<owner>` with the GitHub owner that publishes this repository's GHCR pa
 ```jsonc
 {
     "dev.containers.defaultFeatures": {
-        "ghcr.io/<owner>/devcontainer-features/codex:1": {
+        "ghcr.io/SirTremain/devcontainer-features/codex:1": {
             "version": "latest"
         }
     }
